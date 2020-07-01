@@ -2,20 +2,20 @@
   <div class="buyback">
     <v-col cols="12" md="6">
       <h3>
-        Paste Buyback Here
+        Paste Buyback Items Here
       </h3>
       <v-textarea
         solo
         name="buyback-input"
-        label="Paste here"
+        label="Paste..."
         v-model="buybackSubmission"
       ></v-textarea>
       <v-btn
         class="white--text"
-        color="deep-purple accent-4"
+        color="primary"
         @click='runSubmission'
       >
-        Yes
+        Submit for Appraisal
       </v-btn>
     </v-col>
     <v-col>
@@ -28,8 +28,8 @@
       <h3 v-if="rejectedList.length">
         Rejected Items:
       </h3>
-      <v-list v-for="row in rejectedList" :key="row.id">
-        <v-list-item>
+      <v-list >
+        <v-list-item v-for="row in rejectedList.filter(item => !!item)" :key="row.id">
           {{ row }}
         </v-list-item>
       </v-list>
@@ -43,8 +43,8 @@ export default {
   components: {},
   data: () => ({
     buybackSubmission: '',
-    refineRate: 0.8137,
-    buybackRate: 0.95,
+    refineRate: 0.81,
+    buybackRate: 0.9,
     buybackValue: 0,
     whitelist: [
       'arkonor',
@@ -252,14 +252,16 @@ export default {
       ].join(',')
     },
     doPriceFetch (toFetch) {
-      return fetch(`https://api2.squirrellogic.com/esi?key=42&type_id=${toFetch}`)
+      return fetch(`https://api2.squirrellogic.com/esi?key=42&type_id=${toFetch}`, {
+        mode: 'cors'
+      })
         .then(resp => {
           return resp.json()
         })
     },
     calculateOneOre (ore, count, modifier, finalRawMaterials) {
       for (const key in ore) {
-        finalRawMaterials[key] += Math.floor(ore[key] * count * modifier * this.refineRate)
+        finalRawMaterials[key] += Math.floor(ore[key] * count * modifier * this.refineRate * this.buybackRate)
       }
     },
     calculateAllMinerals (ore, count, finalRawMaterials) {

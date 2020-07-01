@@ -20,12 +20,12 @@ const routes = [
   },
   {
     path: '/calculator',
-    name: 'Buyback Calculator',
+    name: 'BuybackCalculator',
     component: () => import(/* webpackChunkName: "calculator" */ '../views/Calculator.vue')
   },
   {
     path: '/other',
-    name: 'Other Tools',
+    name: 'OtherTools',
     component: () => import(/* webpackChunkName: "calculator" */ '../views/Other.vue')
   }
 ]

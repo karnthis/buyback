@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <ComingSoon/>
 </template>
+
+<script>
+import ComingSoon from '@/components/ComingSoon'
+export default {
+  name: 'About',
+  components: {
+    ComingSoon
+  }
+}
+</script>

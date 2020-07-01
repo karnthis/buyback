@@ -1,12 +1,13 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+  <ComingSoon/>
 </template>
 
 <script>
+import ComingSoon from '@/components/ComingSoon'
 export default {
-  name: 'Other Tools',
-  components: {}
+  name: 'OtherTools',
+  components: {
+    ComingSoon
+  }
 }
 </script>

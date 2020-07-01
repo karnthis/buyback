@@ -6,16 +6,18 @@
       dark
     >
       <div class="d-flex align-center">
+        <v-btn to="/" text>
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="./assets/SquirrellogicEve.png"
           transition="scale-transition"
           width="40"
         />
 
-        <span class="mr-2">-HC- | Buyback Service</span>
+        <span class="mr-2"> API Testing Corp | Buyback Service</span>
+        </v-btn>
       </div>
 
       <v-spacer></v-spacer>
