@@ -1,9 +1,10 @@
 <template>
   <div class="buyback">
+  <v-row>
     <v-col cols="12" md="6">
-      <h3>
+      <h2>
         Paste Buyback Items Here
-      </h3>
+      </h2>
       <v-textarea
         solo
         name="buyback-input"
@@ -17,14 +18,14 @@
       >
         Submit for Appraisal
       </v-btn>
-    </v-col>
-    <v-col>
+<!--    </v-col>-->
+<!--    <v-col>-->
       <h3>
         Buyback Price:
       </h3>
       <span v-if="buybackValue != 0">{{ buybackValue.toLocaleString() }} isk</span>
-    </v-col>
-    <v-col>
+<!--    </v-col>-->
+<!--    <v-col>-->
       <h3 v-if="rejectedList.length">
         Rejected Items:
       </h3>
@@ -34,6 +35,33 @@
         </v-list-item>
       </v-list>
     </v-col>
+    <v-spacer></v-spacer>
+<!--    <v-col cols="12" md="1">-->
+<!--    </v-col>-->
+    <v-col cols="12" md="4">
+      <h2>
+        Instructions
+      </h2>
+        <ol>
+      <li>
+        Open your inventory and switch to Details or List view
+      </li>
+      <li>
+        Select the ores you wish to sell (no moon ore accepted at this time) and copy them with Ctrl+C
+      </li>
+      <li>
+        Paste the list of ores into the field to the left of these directions
+      </li>
+      <li>
+        Press "Submit for Appraisal" and wait for your submission to process
+      </li>
+      <li>
+        Once you have the value of your buyback contract, create a new contract to "API Testing Corp" with the given price and items
+      </li>
+    </ol>
+s    </v-col>
+    <v-spacer></v-spacer>
+  </v-row>
   </div>
 </template>
 
