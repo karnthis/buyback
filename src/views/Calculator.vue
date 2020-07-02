@@ -47,7 +47,7 @@
         Open your inventory and switch to Details or List view
       </li>
       <li>
-        Select the ores you wish to sell (no moon ore accepted at this time) and copy them with Ctrl+C
+        Select the ores and minerals you wish to sell (no moon ore or goo accepted at this time) and copy them with Ctrl+C
       </li>
       <li>
         Paste the list of ores into the field to the left of these directions
@@ -59,7 +59,7 @@
         Once you have the value of your buyback contract, create a new contract to "API Testing Corp" with the given price and items
       </li>
     </ol>
-s    </v-col>
+    </v-col>
     <v-spacer></v-spacer>
   </v-row>
   </div>
@@ -75,6 +75,14 @@ export default {
     buybackRate: 0.9,
     buybackValue: 0,
     whitelist: [
+      'tritanium',
+      'pyerite',
+      'mexallon',
+      'isogen',
+      'nocxium',
+      'zydrine',
+      'megacyte',
+      'morphite',
       'arkonor',
       'crimson arkonor',
       'prime arkonor',
@@ -245,7 +253,7 @@ export default {
       const lowerFragment = fragments[0].toLowerCase()
       if (this.whitelist.includes(lowerFragment)) {
         if (this.condenser[lowerFragment]) {
-          console.log(fragments[1])
+          // console.log(fragments[1])
           this.condenser[lowerFragment] += Number(fragments[1].replace(/\.|,/g, ''))
         } else {
           // console.log(fragments[1])
@@ -303,6 +311,30 @@ export default {
       let oreMinerals = {}
       const trueName = oreParts.join(' ')
       switch (oreParts[oreParts.length - 1]) {
+        case 'tritanium':
+          finalRawMaterials.tritanium += Math.floor(count * this.buybackRate)
+          break
+        case 'pyerite':
+          finalRawMaterials.pyerite += Math.floor(count * this.buybackRate)
+          break
+        case 'mexallon':
+          finalRawMaterials.mexallon += Math.floor(count * this.buybackRate)
+          break
+        case 'isogen':
+          finalRawMaterials.isogen += Math.floor(count * this.buybackRate)
+          break
+        case 'nocxium':
+          finalRawMaterials.nocxium += Math.floor(count * this.buybackRate)
+          break
+        case 'zydrine':
+          finalRawMaterials.zydrine += Math.floor(count * this.buybackRate)
+          break
+        case 'megacyte':
+          finalRawMaterials.megacyte += Math.floor(count * this.buybackRate)
+          break
+        case 'morphite':
+          finalRawMaterials.morphite += Math.floor(count * this.buybackRate)
+          break
         case 'arkonor':
           oreMinerals = {
             tritanium: 22000,
