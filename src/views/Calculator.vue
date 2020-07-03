@@ -83,7 +83,7 @@ export default {
   components: {},
   data: () => ({
     buybackSubmission: '',
-    refineRate: 0.81,
+    refineRate: 0.8137,
     buybackRate: 0.9,
     buybackValue: 0,
     whitelist: [
