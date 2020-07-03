@@ -20,6 +20,7 @@
       </v-btn>
 <!--    </v-col>-->
 <!--    <v-col>-->
+      <p></p>
       <h3>
         Buyback Price:
       </h3>
@@ -59,6 +60,17 @@
         Once you have the value of your buyback contract, create a new contract to "API Testing Corp" with the given price and items
       </li>
     </ol>
+      <p></p>
+      <h3>
+        **Please Note** Buyback contracts are only accepted from:
+      </h3>
+      <ul>
+        <li>Hibi</li>
+        <li>Gemodi</li>
+        <li>Chamume</li>
+        <li>Mamet</li>
+      </ul>
+
     </v-col>
     <v-spacer></v-spacer>
   </v-row>

@@ -1,9 +1,9 @@
 <template>
-  <v-app>
+  <v-app
+  class="grey darken-2"
+  >
     <v-app-bar
       app
-      color="primary"
-      dark
     >
       <div class="d-flex align-center">
         <v-btn to="/" text>
@@ -16,7 +16,7 @@
           width="40"
         />
 
-        <span class="mr-2"> API Testing Corp | Buyback Service</span>
+        <h1> API Testing Corp | Buyback Service</h1>
         </v-btn>
       </div>
 
@@ -56,3 +56,5 @@ export default {
   })
 }
 </script>
+
+<style></style>
