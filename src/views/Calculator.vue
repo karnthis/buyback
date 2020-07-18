@@ -69,6 +69,7 @@
         <li>Gemodi</li>
         <li>Chamume</li>
         <li>Mamet</li>
+        <li>AY-24I</li>
       </ul>
 
     </v-col>
