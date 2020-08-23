@@ -70,6 +70,7 @@
         <li>Chamume</li>
         <li>Mamet</li>
         <li>AY-24I</li>
+        <li>7YWV-S</li>
       </ul>
 
     </v-col>
