@@ -66,11 +66,13 @@
       </h3>
       <ul>
         <li>Hibi</li>
-        <li>Gemodi</li>
+        <!-- <li>Gemodi</li> -->
         <li>Chamume</li>
-        <li>Mamet</li>
+        <!-- <li>Mamet</li> -->
         <li>AY-24I</li>
         <li>7YWV-S</li>
+        <li>HP-6Z6</li>
+        <li>H9-J8N</li>
       </ul>
 
     </v-col>
@@ -86,7 +88,7 @@ export default {
   data: () => ({
     buybackSubmission: '',
     refineRate: 0.8137,
-    buybackRate: 0.9,
+    buybackRate: 1,
     buybackValue: 0,
     whitelist: [
       'tritanium',
@@ -351,9 +353,9 @@ export default {
           break
         case 'arkonor':
           oreMinerals = {
-            tritanium: 22000,
-            mexallon: 2500,
-            megacyte: 320
+            pyerite: 3200,
+            mexallon: 1200,
+            megacyte: 120
           }
           if (trueName === 'crimson arkonor') {
             modifier = 1.05
@@ -366,9 +368,9 @@ export default {
           break
         case 'bistot':
           oreMinerals = {
-            pyerite: 12000,
-            zydrine: 450,
-            megacyte: 100
+            pyerite: 3200,
+            mexallon: 1200,
+            zydrine: 160
           }
           if (trueName === 'triclinic bistot') {
             modifier = 1.05
@@ -381,9 +383,9 @@ export default {
           break
         case 'crokite':
           oreMinerals = {
-            tritanium: 21000,
-            nocxium: 760,
-            zydrine: 135
+            pyerite: 800,
+            mexallon: 2000,
+            nocxium: 800
           }
           if (trueName === 'sharp crokite') {
             modifier = 1.05
@@ -396,9 +398,9 @@ export default {
           break
         case 'ochre':
           oreMinerals = {
-            tritanium: 10000,
-            isogen: 1600,
-            nocxium: 120
+            mexallon: 1360,
+            isogen: 1200,
+            nocxium: 320
           }
           if (trueName === 'onyx ochre') {
             modifier = 1.05
@@ -411,9 +413,9 @@ export default {
           break
         case 'gneiss':
           oreMinerals = {
-            pyerite: 2200,
-            mexallon: 2400,
-            isogen: 300
+            pyerite: 2000,
+            mexallon: 1500,
+            isogen: 800
           }
           if (trueName === 'iridescent gneiss') {
             modifier = 1.05
@@ -426,10 +428,8 @@ export default {
           break
         case 'hedbergite':
           oreMinerals = {
-            pyerite: 1000,
-            isogen: 200,
-            nocxium: 100,
-            zydrine: 19
+            pyerite: 450,
+            nocxium: 120
           }
           if (trueName === 'vitric hedbergite') {
             modifier = 1.05
@@ -442,10 +442,8 @@ export default {
           break
         case 'hemorphite':
           oreMinerals = {
-            tritanium: 2200,
-            isogen: 100,
-            nocxium: 120,
-            zydrine: 15
+            isogen: 240,
+            nocxium: 90
           }
           if (trueName === 'vivid hemorphite') {
             modifier = 1.05
@@ -458,9 +456,8 @@ export default {
           break
         case 'jaspet':
           oreMinerals = {
-            mexallon: 350,
-            nocxium: 75,
-            zydrine: 8
+            mexallon: 150,
+            nocxium: 50
           }
           if (trueName === 'pure jaspet') {
             modifier = 1.05
@@ -473,9 +470,8 @@ export default {
           break
         case 'kernite':
           oreMinerals = {
-            tritanium: 134,
-            mexallon: 267,
-            isogen: 134
+            mexallon: 60,
+            isogen: 120
           }
           if (trueName === 'luminous kernite') {
             modifier = 1.05
@@ -488,7 +484,7 @@ export default {
           break
         case 'mercoxit':
           oreMinerals = {
-            morphite: 300
+            morphite: 140
           }
           if (trueName === 'magma mercoxit') {
             modifier = 1.05
@@ -501,9 +497,8 @@ export default {
           break
         case 'omber':
           oreMinerals = {
-            tritanium: 800,
-            pyerite: 100,
-            isogen: 85
+            pyerite: 90,
+            isogen: 75
           }
           if (trueName === 'silvery omber') {
             modifier = 1.05
@@ -516,9 +511,8 @@ export default {
           break
         case 'plagioclase':
           oreMinerals = {
-            tritanium: 107,
-            pyerite: 213,
-            mexallon: 107
+            tritanium: 175,
+            mexallon: 70
           }
           if (trueName === 'azure plagioclase') {
             modifier = 1.05
@@ -531,10 +525,8 @@ export default {
           break
         case 'pyroxeres':
           oreMinerals = {
-            tritanium: 351,
-            pyerite: 25,
-            mexallon: 50,
-            nocxium: 5
+            pyerite: 90,
+            mexallon: 30
           }
           if (trueName === 'solid pyroxeres') {
             modifier = 1.05
@@ -547,8 +539,8 @@ export default {
           break
         case 'scordite':
           oreMinerals = {
-            tritanium: 346,
-            pyerite: 173
+            tritanium: 150,
+            pyerite: 90
           }
           if (trueName === 'condensed scordite') {
             modifier = 1.05
@@ -561,10 +553,11 @@ export default {
           break
         case 'spodumain':
           oreMinerals = {
-            tritanium: 56000,
-            pyerite: 12050,
-            mexallon: 2100,
-            isogen: 450
+            tritanium: 48000,
+            isogen: 100,
+            nocxium: 160,
+            zydrine: 80,
+            megacyte: 40
           }
           if (trueName === 'bright spodumain') {
             modifier = 1.05
@@ -577,7 +570,7 @@ export default {
           break
         case 'veldspar':
           oreMinerals = {
-            tritanium: 410
+            tritanium: 400
           }
           if (trueName === 'concentrated veldspar') {
             modifier = 1.05
