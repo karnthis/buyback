@@ -249,8 +249,8 @@ export default {
       this.parsePaste(this.buybackSubmission, finalRawMaterials)
       console.dir(finalRawMaterials)
       const fetchedValues = await this.doPriceFetch(this.buildFetchedIds())
-      const usableValues = fetchedValues.reduce((acc, curr) => {
-        acc[curr.itemID] = curr.highBuy
+      const usableValues = fetchedValues.data.reduce((acc, curr) => {
+        acc[curr.data.itemID] = curr.data.highBuy
         return acc
       }, {})
       this.buybackValue += finalRawMaterials.tritanium * usableValues[34]
