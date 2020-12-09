@@ -57,7 +57,10 @@
         Press "Submit for Appraisal" and wait for your submission to process
       </li>
       <li>
-        Once you have the value of your buyback contract, create a new contract to "API Testing Corp" with the given price and items
+        Once you have the value of your buyback contract, create a new 3 day contract to "API Testing Corp" with the given price and items
+      </li>
+      <li>
+        If you wish to sell other items not supported in the ore buyback calculator, please contact TcGre'l en Karnt directly for a quote
       </li>
     </ol>
       <p></p>
