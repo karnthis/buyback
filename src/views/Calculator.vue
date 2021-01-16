@@ -307,7 +307,7 @@ export default {
       ].join(',')
     },
     doPriceFetch (toFetch) {
-      return fetch(`https://api2.squirrellogic.com/esi?key=42&type_id=${toFetch}`, {
+      return fetch(`https://api2.squirrellogic.com/esi?key=42&system=amarr&type_id=${toFetch}`, {
         mode: 'cors'
       })
         .then(resp => {
